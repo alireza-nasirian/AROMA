@@ -23,3 +23,15 @@ This script will generate a .txt file containing paths of random .buildspec file
 ## 3. Rebuild Packages
 To rebuild packages, run [run_rebuilds.py](pythonScripts/run_rebuilds.py). This scripts will read paths from paths.txt that previous script generated and run [rebuild.sh](shellScripts/rebuild.sh) script on each package and will write rebuild log of each package into a separate .txt file in output_logs directory.
 
+## Counting number of successful builds
+To count the number of successful builds, you have to run [successful_build_counter.py](pythonScripts/successful_build_counter.py).
+
+This script count the number of unsuccessful builds from build logs.
+
+## Counting number of ok and ko files
+In each successful build, there are a number of "ok" files indicating the count of successfully rebuilt files within the package, and a number of "ko" files indicating files that were not successfully rebuilt.
+
+To count the number of ok and ko files you have to run [ok_ko_counter.py](project/ok_ko_counter.py).
+
+This script count the number of ok and ko files from build logs.
+
